@@ -24,3 +24,22 @@ function actualizarListaDeAmigos() { //Sincoriniza lo que esta en el arreglo
         lista.appendChild (li);
     }
 }
+
+// Función para sortear todos los amigos
+function sortearAmigo() {
+    if (amigos.length < 2) { //verifica que si el arreglo tiene menos de 2
+        alert("Se necesitan al menos dos amigos para realizar el sorteo.");//mostrara esta alerta
+        return; //detiene la ejecucuón de la funcion
+    }
+     // Mezcla el arreglo de forma aleatoria
+    amigos.sort(() => Math.random() - 0.5);
+
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = ""; // Limpia los resultados anteriores
+
+    for (let i = 0; i < amigos.length; i++) {
+        // El amigo secreto es el siguiente en la lista, el último le da al primero
+        let amigoSecreto = (i === amigos.length - 1) ? amigos[0] : amigos[i + 1];
+        resultado.innerHTML += `<p>${amigos[i]} → ${amigoSecreto}</p>`;
+    }
+}
