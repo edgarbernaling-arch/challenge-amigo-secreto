@@ -1,17 +1,20 @@
 // Arreglo para ir almacenadando el nombre de los amigos
 let amigos = [];
-// Esta es la función para agregar amigos
 function agregarAmigo () {
-    let nombre = document.getElementById("nombreAmigo").value;//Obtiene el valor del campo de texto
-    if (nombre.trim() !== "") { //verificar que el nombre no este vacio
-        amigos.push(nombre);//si es valido lo agrega a nuestro arreglo
-        console.log(nombre);//muestra el valor ingresado en la consola
-        actualizarListaDeAmigos();//asi mostrar el nuevo nombre en la pagina
-        document.getElementById("nombreAmigo").value = "";
+    let nombre = document.getElementById("nombreAmigo").value;
+    // Expresión regular para validar que el nombre solo contiene letras (sin espacios)
+    let soloLetrasRegex = /^[A-Za-zñÑáéíóúÁÉÍÓÚ]+$/; //No se pueden ingresar números ni espacios
+
+    if (nombre.trim() === "") { //Ingresar informacion
+        alert("Por favor, ingrese un nombre válido.");
+    } else if (!soloLetrasRegex.test(nombre)) { //Solo ingresar letras
+        alert("Por favor, ingrese letras sin espacios ni números."); // Mensaje de alerta actualizado
     } else {
-        alert("Ingresar un nombre valido");
+        amigos.push(nombre);
+        console.log(nombre);
+        actualizarListaDeAmigos();
+        document.getElementById("nombreAmigo").value = "";
     }
-    
 }
 
 //Esta funcion es para actualizar la lista de amigos
