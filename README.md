@@ -2,6 +2,9 @@
 
 Es una aplicación que permita a los usuarios ingresar nombres de amigos en una lista para luego realizar un sorteo aleatorio y determinar quién es el "amigo secreto".
 
+## ⚒️ Pagina inicio
+<img width="1914" height="790" alt="Amgo secreto" src="https://github.com/user-attachments/assets/a5b01be0-1578-49ae-959a-c49d915b81b1" />
+
 ## 🎁 Sorteo de Amigo Secreto
 
 ¡Bienvenido a la aplicación de Sorteo de Amigo Secreto! Este proyecto te permite organizar un sorteo aleatorio para tu grupo de amigos de una manera sencilla y divertida.
