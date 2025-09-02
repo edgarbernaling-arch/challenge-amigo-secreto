@@ -5,6 +5,8 @@ Es una aplicación que permita a los usuarios ingresar nombres de amigos en una 
 ## ⚒️ Pagina inicio
 <img width="1914" height="790" alt="Amgo secreto" src="https://github.com/user-attachments/assets/a5b01be0-1578-49ae-959a-c49d915b81b1" />
 
+[![Live Demo](https://img.shields.io/badge/Demo-Online-green?style=for-the-badge&logo=google-chrome)](https://edgarbernaling-arch.github.io/challenge-amigo-secreto/)
+
 ## 🎁 Sorteo de Amigo Secreto
 
 ¡Bienvenido a la aplicación de Sorteo de Amigo Secreto! Este proyecto te permite organizar un sorteo aleatorio para tu grupo de amigos de una manera sencilla y divertida.
