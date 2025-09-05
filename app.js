@@ -28,21 +28,22 @@ function actualizarListaDeAmigos() { //Sincoriniza lo que esta en el arreglo
     }
 }
 
-// Función para sortear todos los amigos
+// Función para sortear un solo amigo
 function sortearAmigo() {
-    if (amigos.length < 2) { //verifica que si el arreglo tiene menos de 2
-        alert("Se necesitan al menos dos amigos para realizar el sorteo.");//mostrara esta alerta
-        return; //detiene la ejecucuón de la funcion
+    if (amigos.length < 2) { 
+        alert("Se necesitan al menos dos amigos para realizar el sorteo.");
+        return; 
     }
-     // Mezcla el arreglo de forma aleatoria
-    amigos.sort(() => Math.random() - 0.5);
+    
+    // Selecciona un índice aleatorio del arreglo de amigos
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    
+    // Obtiene el nombre del amigo secreto usando el índice aleatorio
+    let amigoSecreto = amigos[indiceAleatorio];
 
     let resultado = document.getElementById('resultado');
     resultado.innerHTML = ""; // Limpia los resultados anteriores
 
-    for (let i = 0; i < amigos.length; i++) {
-        // El amigo secreto es el siguiente en la lista, el último le da al primero
-        let amigoSecreto = (i === amigos.length - 1) ? amigos[0] : amigos[i + 1];
-        resultado.innerHTML += `<p>${amigos[i]} → ${amigoSecreto}</p>`;
-    }
+    // Muestra el nombre del amigo secreto en un solo párrafo
+    resultado.innerHTML = `<p>El amigo secreto es: ${amigoSecreto}</p>`;
 }
